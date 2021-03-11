@@ -1,0 +1,29 @@
+.layout img {
+  margin: auto;
+  max-width: 98%;
+  display: block;
+  height: auto;
+}
+
+.layout h1,
+.layout h2 {
+  text-align: center;
+}
+
+.next {
+  height: 128px;
+  display: block;
+  margin: 2rem auto;
+  max-width: 300px;
+}
+
+.title {
+  margin-top: -8px;
+  font-size: 48px;
+  /* linear-gradient(to 方向, 開始色 位置の値%, 終了色 位置の値%,); */
+  background-image: linear-gradient(180deg, #090c0f 10%, #52708a 100%);
+  -webkit-text-fill-color: transparent;
+  /* textの形にbackgroundをくり抜く */
+  -webkit-background-clip: text;
+  background-clip: black;
+}
