@@ -1,62 +1,43 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Header from '../components/header';
+import styles from '../styles/Home.module.css';
+import sharedStyles from '../styles/shared.module.css';
+import NextLogo from '../components/svgs/nextjs-logo';
+import ReactLogo from '../components/svgs/react-logo';
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
+      <Header titlePre="Home" />
+      <div className={sharedStyles.layout}>
+        <h1 className={sharedStyles.title}>Shota Akizuki</h1>
+        <h2 className={sharedStyles.mantra} style={{ margin: 32 }}>
+          Practical, Minimalistic, Beautiful.
+        </h2>
+        <h2
+          style={{
+            marginTop: 24,
+            fontSize: 24
+          }}
+        >
+          React & Next.js Web Development
+        </h2>
+        <ReactLogo style={{ marginTop: 80 }} className={sharedStyles.logo} />
+        <NextLogo
+          style={{
+            marginTop: 80,
+            fill: 'var(--color-text)',
+            marginBottom: -16
+          }}
+          className={sharedStyles.logo}
+        />
+      </div>
+      <footer style={{ marginTop: 40 }} className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
+          Powered by{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
