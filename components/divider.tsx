@@ -1,3 +1,3 @@
-import styles from '../styles/Home.module.css';
+import sharedStyles from '../styles/shared.module.css';
 
-export const Divider = () => <p className={styles.divider} />;
+export const Divider = () => <p className={sharedStyles.divider} />;

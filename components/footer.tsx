@@ -1,10 +1,11 @@
 import FooterStyles from '../styles/footer.module.css';
 import ThemeChanger from './ThemeChanger';
-import styles from '../styles/Home.module.css';
+import { Divider } from '../components/divider';
 
 export const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={FooterStyles.footer}>
+      <Divider />
       <div className={FooterStyles.layout}>
         <div>
           <ThemeChanger />
