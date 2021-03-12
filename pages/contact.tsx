@@ -36,7 +36,7 @@ export default () => (
   <>
     <Header titlePre="Contact" />
     <Divider />
-    <div style={{ marginTop: 96 }} className={sharedStyles.layout}>
+    <div style={{ marginTop: 120 }} className={sharedStyles.layout}>
       <PointedStar
         className={sharedStyles.logo}
         style={{
@@ -46,7 +46,9 @@ export default () => (
         }}
       />
       <h1 className={contactStyles.title}>Contact</h1>
-      <h2 className={contactStyles.name}>Shota Akizuki - Developer</h2>
+      <h2 style={{ marginTop: 8 }} className={contactStyles.name}>
+        Shota Akizuki - Developer
+      </h2>
       <div className={contactStyles.links}>
         {contacts.map(({ Comp, link, alt }) => {
           return (

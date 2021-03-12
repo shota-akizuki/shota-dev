@@ -9,9 +9,19 @@ export default function Home() {
     <>
       <Header titlePre="Home" />
       <div className={sharedStyles.layout}>
-        <h1 style={{ marginBottom: 56 }} className={sharedStyles.title}>
+        <h1 style={{ marginBottom: 24 }} className={sharedStyles.title}>
           Shota Akizuki
         </h1>
+        <h2
+          className={sharedStyles.title}
+          style={{
+            fontSize: 20,
+            marginBottom: 24,
+            color: '#333'
+          }}
+        >
+          Minimalistic, Practical, Beautiful.
+        </h2>
         <Divider />
         <h2
           style={{

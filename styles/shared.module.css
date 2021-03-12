@@ -13,10 +13,7 @@
   margin-top: 0px;
   text-align: center;
 }
-.mantra {
-  color: var(--color-accents-3);
-  font-size: 1rem;
-}
+
 .logo {
   height: 112px;
   display: block;
@@ -37,9 +34,9 @@
 
 .divider {
   margin: auto;
-  width: 80%;
+  width: 88%;
   border-top: 1px solid #eaeaea;
+  border-radius: 5px;
   justify-content: center;
   align-items: center;
-  color: #888;
 }
