@@ -3,6 +3,7 @@ import Head from 'next/head';
 import ExtLink from './ext-link';
 import { useRouter } from 'next/router';
 import styles from '../styles/header.module.css';
+import { Divider } from '../components/divider';
 
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Home', page: '/' },
@@ -39,6 +40,7 @@ export default ({ titlePre = '' }) => {
           </li>
         ))}
       </ul>
+      <Divider />
     </header>
   );
 };
