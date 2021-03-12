@@ -34,3 +34,12 @@
   -webkit-background-clip: text;
   background-clip: black;
 }
+
+.divider {
+  margin: auto;
+  width: 95%;
+  border-top: 0.5px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
