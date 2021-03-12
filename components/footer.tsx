@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className={FooterStyles.footer}>
       <Divider />
       <div className={FooterStyles.layout}>
-        <div>
+        <div style={{ marginTop: 24 }}>
           <ThemeChanger />
         </div>
         <span>Copyright©Shota Akizuki All rights reserved.</span>

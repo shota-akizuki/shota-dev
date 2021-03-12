@@ -35,8 +35,8 @@ const contacts = [
 export default () => (
   <>
     <Header titlePre="Contact" />
-    <Divider style={{ mariginBottom: 200 }} />
-    <div className={sharedStyles.layout}>
+    <Divider />
+    <div style={{ marginTop: 96 }} className={sharedStyles.layout}>
       <PointedStar
         className={sharedStyles.logo}
         style={{
