@@ -1,16 +1,20 @@
 import Header from '../components/header';
-import styles from '../styles/Home.module.css';
 import sharedStyles from '../styles/shared.module.css';
 import NextLogo from '../components/svgs/nextjs-logo';
 import ReactLogo from '../components/svgs/react-logo';
+import { Divider } from '../components/divider';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Header titlePre="Home" />
       <div className={sharedStyles.layout}>
         <h1 className={sharedStyles.title}>Shota Akizuki</h1>
-        <h2 className={sharedStyles.mantra} style={{ margin: 32 }}>
+        <Divider />
+        <h2
+          className={sharedStyles.mantra}
+          style={{ margin: 32, marginTop: 80 }}
+        >
           Practical, Minimalistic, Beautiful.
         </h2>
         <h2
@@ -31,6 +35,6 @@ export default function Home() {
           className={sharedStyles.logo}
         />
       </div>
-    </div>
+    </>
   );
 }

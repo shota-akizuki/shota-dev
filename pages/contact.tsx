@@ -7,6 +7,7 @@ import Envelope from '../components/svgs/envelope';
 import Instagram from '../components/svgs/instagram';
 import PointedStar from '../components/svgs/pointed-star';
 import Twitter from '../components/svgs/twitter';
+import { Divider } from '../components/divider';
 
 const contacts = [
   {
@@ -34,10 +35,15 @@ const contacts = [
 export default () => (
   <>
     <Header titlePre="Contact" />
+    <Divider style={{ mariginBottom: 200 }} />
     <div className={sharedStyles.layout}>
       <PointedStar
         className={sharedStyles.logo}
-        style={{ height: 120, fill: 'var(--color-text)', marginBottom: 16 }}
+        style={{
+          height: 120,
+          fill: 'var(--color-text)',
+          marginBottom: 16
+        }}
       />
       <h1 className={contactStyles.title}>Contact</h1>
       <h2 className={contactStyles.name}>Shota Akizuki - Developer</h2>
