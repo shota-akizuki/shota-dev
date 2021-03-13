@@ -1,11 +1,16 @@
 import Link from 'next/link';
+import Header from '../components/header';
+import { parseISO, format } from 'date-fns';
+import styles from '../styles/blogs.module.css';
 
 export default function BlogPage({ blog }) {
   return (
-    <div>
+    <div className={styles.blogs}>
+      <Header titlePre="Blog" />
       <ul>
         {blog.map((blog) => (
           <li key={blog.id}>
+            <span>{format(parseISO(blog.publishedAt), 'PP')}</span>
             <Link href={`blog/${blog.id}`}>
               <a>{blog.title}</a>
             </Link>

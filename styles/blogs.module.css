@@ -1,0 +1,14 @@
+.blogs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blogs span {
+  margin-right: 16px;
+}
+
+.blogs {
+  margin: auto;
+  width: 88%;
+}

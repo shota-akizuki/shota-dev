@@ -1,22 +1,28 @@
 import styles from '../../styles/blog.module.scss';
-
+import { parseISO, format } from 'date-fns';
+import Header from '../../components/header';
 // pages/blog/[id].js
 export default function BlogId({ blog }) {
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>{blog.title}</h1>
-      <p className={styles.publishedAt}>{blog.publishedAt}</p>
+    <>
+      <Header titlePre="Blog" />
+      <main className={styles.main}>
+        <h1 className={styles.title}>{blog.title}</h1>
+        <p className={styles.publishedAt}>
+          {format(parseISO(blog.publishedAt), 'PP')}
+        </p>
 
-      <div
-        className={styles.post}
-        dangerouslySetInnerHTML={{
-          __html: `${blog.contents}`
-        }}
-      />
-      <p className="category">
-        Category {blog.category && `${blog.category.name}`}
-      </p>
-    </main>
+        <div
+          className={styles.post}
+          dangerouslySetInnerHTML={{
+            __html: `${blog.contents}`
+          }}
+        />
+        <p style={{ fontSize: 16, marginLeft: 16 }} className="category">
+          Category…{blog.category && `${blog.category.name}`}
+        </p>
+      </main>
+    </>
   );
 }
 
