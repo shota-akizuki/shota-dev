@@ -29,7 +29,7 @@ export default function BlogId({ blog }) {
             __html: `${blog.contents}`
           }}
         />
-        <p style={{ fontSize: 16, marginLeft: 16 }} className="category">
+        <p className={styles.category}>
           Category…{blog.category && `${blog.category.name}`}
         </p>
       </main>
