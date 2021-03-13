@@ -3,11 +3,13 @@ import Header from '../components/header';
 import { parseISO, format } from 'date-fns';
 import styles from '../styles/blogs.module.css';
 
-export default function BlogPage({ blog }) {
+//ブログ一覧を表示するコンポーネント
+
+export default function Blogs({ blog }) {
   return (
     <div className={styles.blogs}>
-      <Header titlePre="Blog" />
-      <ul>
+      <Header titlePre="Blogs" />
+      <ul style={{ marginTop: 40 }}>
         {blog.map((blog) => (
           <li key={blog.id}>
             <span>{format(parseISO(blog.publishedAt), 'PP')}</span>

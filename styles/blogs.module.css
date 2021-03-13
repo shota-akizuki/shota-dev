@@ -11,4 +11,5 @@
 .blogs {
   margin: auto;
   width: 88%;
+  max-width: 42rem;
 }

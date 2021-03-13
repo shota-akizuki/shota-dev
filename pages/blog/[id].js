@@ -1,11 +1,13 @@
 import styles from '../../styles/blog.module.scss';
 import { parseISO, format } from 'date-fns';
 import Header from '../../components/header';
-// pages/blog/[id].js
+
+//ここがブログのポスト本体
 export default function BlogId({ blog }) {
   return (
     <>
       <Header titlePre="Blog" />
+
       <main className={styles.main}>
         <h1 className={styles.title}>{blog.title}</h1>
         <p className={styles.publishedAt}>
