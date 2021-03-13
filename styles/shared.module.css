@@ -35,7 +35,8 @@
 .divider {
   margin: auto;
   width: 88%;
-  border-top: 1px solid #eaeaea;
+  max-width: 42rem;
+  border-top: 0.8px solid #eaeaea;
   border-radius: 5px;
   justify-content: center;
   align-items: center;
