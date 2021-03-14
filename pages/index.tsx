@@ -22,7 +22,7 @@ export default function Home({ blog }) {
         >
           Minimalistic, Practical, Beautiful.
         </h2>
-        <Divider />
+
         <h2
           style={{
             marginTop: 80,

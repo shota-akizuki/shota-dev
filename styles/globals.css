@@ -145,6 +145,7 @@ footer span {
 /*Dark Theme用*/
 :root {
   --color-text: #000;
+  --color-accents-1: #111;
   --color-accents-2: #777777;
   --color-accents-3: #888;
   --color-bg: #fff;
@@ -155,6 +156,7 @@ footer span {
 /* 追記 */
 :root[data-theme='dark'] {
   --color-text: #fff;
+  --color-accents-1: #fff;
   --color-accents-2: #fff;
   --color-accents-3: #fff;
   --color-bg: #000;
