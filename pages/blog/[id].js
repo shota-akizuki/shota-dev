@@ -16,6 +16,13 @@ export default function BlogId({ blog }) {
           property="og:image"
           content={blog.thumbnail && blog.thumbnail.url}
         />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@granfairs" />
+        <meta name="twitter:title" content={blog.title} />
+        <meta
+          name="twitter:description"
+          content="Minimalistic, Practical, Beautiful."
+        />
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>{blog.title}</h1>
