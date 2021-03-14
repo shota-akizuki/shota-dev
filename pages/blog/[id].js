@@ -17,7 +17,7 @@ export default function BlogId({ blog }) {
           content={blog.thumbnail && blog.thumbnail.url}
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@granfairs" />
+        <meta name="twitter:site" content="@shota_akizuki" />
         <meta name="twitter:title" content={blog.title} />
         <meta
           name="twitter:description"
