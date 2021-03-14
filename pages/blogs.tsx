@@ -23,7 +23,7 @@ export default function Blogs({ blog }) {
   );
 }
 
-// データをテンプレートに受け渡す部分の処理を記述します
+// データをテンプレートに受け渡す部分の処理を記述
 export const getStaticProps = async () => {
   const key = {
     headers: { 'X-API-KEY': process.env.API_KEY }

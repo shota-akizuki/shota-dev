@@ -7,7 +7,6 @@ import Envelope from '../components/svgs/envelope';
 import Instagram from '../components/svgs/instagram';
 import PointedStar from '../components/svgs/pointed-star';
 import Twitter from '../components/svgs/twitter';
-import { Divider } from '../components/divider';
 
 const contacts = [
   {

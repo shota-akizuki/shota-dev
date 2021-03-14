@@ -17,8 +17,16 @@ export default ({ titlePre = '' }) => {
     <header className={styles.header}>
       <Head>
         <title>{titlePre ? `${titlePre} |` : ''} Shota Developer Website</title>
-        <meta name="description" content="" />
-        <meta name="og:title" content="Shota Developer Website" />
+        <meta name="description" content="Shota's Blog" />
+        <meta name="og:title" content="Shota Dev" />
+        <meta property="og:image" content="https://shota-dev.ml/mantra.jpeg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@shota_akizuki" />
+        <meta name="twitter:title" content="Shota's Blog" />
+        <meta
+          name="twitter:description"
+          content="Minimalistic, Practical, Beautiful."
+        />
       </Head>
       <ul>
         {navItems.map(({ label, page, link }) => (

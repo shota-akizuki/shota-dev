@@ -2,7 +2,6 @@ import Header from '../components/header';
 import sharedStyles from '../styles/shared.module.css';
 import NextLogo from '../components/svgs/nextjs-logo';
 import ReactLogo from '../components/svgs/react-logo';
-import { Divider } from '../components/divider';
 
 export default function Home({ blog }) {
   return (
