@@ -32,35 +32,37 @@ const contacts = [
 ];
 
 export default function Contact() {
-  <>
-    <Header titlePre="Contact" />
-    <div style={{ marginTop: 96 }} className={sharedStyles.layout}>
-      <PointedStar
-        className={sharedStyles.logo}
-        style={{
-          height: 120,
-          fill: 'var(--color-text)',
-          marginBottom: 16
-        }}
-      />
-      <h1 className={contactStyles.title}>Contact</h1>
-      <h2 style={{ marginTop: 8 }} className={contactStyles.name}>
-        Shota Akizuki - Developer
-      </h2>
-      <div className={contactStyles.links}>
-        {contacts.map(({ Comp, link, alt }) => {
-          return (
-            <ExtLink
-              key={link}
-              href={link}
-              aria-label={alt}
-              style={{ fill: 'var(--color-text)' }}
-            >
-              <Comp height={32} />
-            </ExtLink>
-          );
-        })}
+  return (
+    <>
+      <Header titlePre="Contact" />
+      <div style={{ marginTop: 80 }} className={sharedStyles.layout}>
+        <PointedStar
+          className={sharedStyles.logo}
+          style={{
+            height: 120,
+            fill: 'var(--color-text)',
+            marginBottom: 16
+          }}
+        />
+        <h1 className={contactStyles.title}>Contact</h1>
+        <h2 style={{ marginTop: 8 }} className={contactStyles.name}>
+          Shota Akizuki - Developer
+        </h2>
+        <div className={contactStyles.links}>
+          {contacts.map(({ Comp, link, alt }) => {
+            return (
+              <ExtLink
+                key={link}
+                href={link}
+                aria-label={alt}
+                style={{ fill: 'var(--color-text)' }}
+              >
+                <Comp height={32} />
+              </ExtLink>
+            );
+          })}
+        </div>
       </div>
-    </div>
-  </>;
+    </>
+  );
 }
