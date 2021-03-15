@@ -31,7 +31,7 @@ const contacts = [
   }
 ];
 
-export default () => (
+export default function Contact() {
   <>
     <Header titlePre="Contact" />
     <div style={{ marginTop: 96 }} className={sharedStyles.layout}>
@@ -62,5 +62,5 @@ export default () => (
         })}
       </div>
     </div>
-  </>
-);
+  </>;
+}

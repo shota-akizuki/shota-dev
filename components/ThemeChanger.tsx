@@ -9,14 +9,15 @@ const ThemeChanger = () => {
   // After mounting, we have access to the theme
   useEffect(() => setMounted(true), []);
   return (
-    <div>  <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-      {mounted && theme === 'dark' ? (
-        <DarkIcon style={{ height: 16 }} />
-      ) : (
-        <LightIcon style={{ height: 16 }} />
-      )}
-    </button></div>
-  
+    <div>
+      <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+        {mounted && theme === 'dark' ? (
+          <DarkIcon style={{ height: 16 }} />
+        ) : (
+          <LightIcon style={{ height: 16 }} />
+        )}
+      </button>
+    </div>
   );
 };
 
