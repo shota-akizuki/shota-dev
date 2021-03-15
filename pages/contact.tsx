@@ -4,7 +4,6 @@ import sharedStyles from '../styles/shared.module.css';
 import contactStyles from '../styles/contact.module.css';
 import GitHub from '../components/svgs/github';
 import Envelope from '../components/svgs/envelope';
-import Instagram from '../components/svgs/instagram';
 import PointedStar from '../components/svgs/pointed-star';
 import Twitter from '../components/svgs/twitter';
 
@@ -13,11 +12,6 @@ const contacts = [
     Comp: Twitter,
     alt: 'twitter icon',
     link: 'https://twitter.com/shota_akizuki'
-  },
-  {
-    Comp: Instagram,
-    alt: 'instagram icon',
-    link: 'https://www.instagram.com/shota_akizuki'
   },
   {
     Comp: GitHub,
