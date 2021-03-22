@@ -1,3 +1,4 @@
+// 下書き状態のコンテンツを取得
 export const getStaticProps = async (context) => {
   const slug = context.params?.slug;
   const draftKey = context.previewData?.draftKey;
