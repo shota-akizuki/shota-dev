@@ -1,4 +1,4 @@
-export default async function getStaticProps(context) {
+export const getStaticProps = async (context) => {
   const slug = context.params?.slug;
   const draftKey = context.previewData?.draftKey;
   const content = await fetch(
@@ -12,4 +12,4 @@ export default async function getStaticProps(context) {
       content
     }
   };
-}
+};
