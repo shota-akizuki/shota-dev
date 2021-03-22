@@ -53,7 +53,7 @@ export const getStaticPaths = async () => {
     .then((res) => res.json())
     .catch(() => null);
   const paths = data.contents.map((content) => `/blog/${content.id}`);
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 };
 
 // データをテンプレートに受け渡す部分の処理
