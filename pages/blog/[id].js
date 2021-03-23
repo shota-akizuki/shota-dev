@@ -55,7 +55,8 @@ export const getStaticPaths = async () => {
   };
   // 下書きは draftKey を含む必要があるのでプレビューの時は追加
   if (preview) {
-    'https://shota-akizuki.microcms.io/api/v1/blog' += `?draftKey=${previewData.draftKey}`;
+    'https://shota-akizuki.microcms.io/api/v1/blog' +
+      `?draftKey=${previewData.draftKey}`;
   }
   const data = await fetch('https://shota-akizuki.microcms.io/api/v1/blog', key)
     .then((res) => res.json())
