@@ -1,42 +1,36 @@
-import axios from 'axios';
+import fetch from 'node-fetch';
 
-const preview = async (req, res) => {
+export default async (req, res) => {
   // クエリの確認
-  if (
-    req.query.secret !== process.env.SECRET_KEY ||
-    !req.query.id ||
-    !req.query.draftKey
-  ) {
-    return res
-      .status(401)
-      .json({ message: `Invalid query, ${process.env.SECRET_KEY}` });
+  if (!req.query.id || !req.query.draftKey) {
+    return res.status(404).end();
   }
 
   // 下書きのデータを取得
+  const content = await fetch(
+    `https://shota-akizuki.microcms.io/api/v1/blog/${req.query.id}?fields=id&draftKey=${req.query.draftKey}`,
+    { headers: { 'X-API-KEY': process.env.API_KEY || '' } }
+  )
+    .then((res) => res.json())
+    .catch((error) => null);
   const key = {
     headers: { 'X-API-KEY': process.env.API_KEY }
   };
-  const url =
-    'https://shota-akizuki.microcms.io/api/v1/blog/' +
-    req.query.id +
-    `?draftKey=${req.query.draftKey}`;
-  const post = await axios.get(url, key);
 
   // エラー処理
-  if (!post) {
-    return res.status(401).json({ message: 'Invalid draft key' });
+
+  if (!content) {
+    return res.status(401).json({ message: 'Invalid slug' });
   }
 
   // プレビューデータを格納
   res.setPreviewData({
     draftKey: req.query.draftKey,
-    id: req.query.id
+    id: content.id
   });
 
   // 詳細ページへリダイレクト
-  res.writeHead(307, { Location: `/blog/${req.query.id}` });
+  res.writeHead(307, { Location: `/blog/${content.id}` });
 
   res.end('Preview mode enabled');
 };
-
-export default preview;
