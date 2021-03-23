@@ -2,10 +2,9 @@ import fetch from 'node-fetch';
 
 export default async (req, res) => {
   // クエリの確認
-  if (!req.query.id || !req.query.draftKey) {
+  if (!req.query.id) {
     return res.status(404).end();
   }
-
   // 下書きのデータを取得
   const content = await fetch(
     `https://shota-akizuki.microcms.io/api/v1/blog/${req.query.id}?fields=id&draftKey=${req.query.draftKey}`,
@@ -13,9 +12,6 @@ export default async (req, res) => {
   )
     .then((res) => res.json())
     .catch((error) => null);
-  const key = {
-    headers: { 'X-API-KEY': process.env.API_KEY }
-  };
 
   // エラー処理
 
@@ -25,12 +21,11 @@ export default async (req, res) => {
 
   // プレビューデータを格納
   res.setPreviewData({
-    draftKey: req.query.draftKey,
-    id: content.id
+    id: content.id,
+    draftKey: req.query.draftKey
   });
 
   // 詳細ページへリダイレクト
-  res.writeHead(307, { Location: `/blog/${content.id}` });
-
+  res.writeHead(307, { Location: `blog/${content.id}` });
   res.end('Preview mode enabled');
 };
