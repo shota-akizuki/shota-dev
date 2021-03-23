@@ -3,7 +3,6 @@ import { parseISO, format } from 'date-fns';
 import Header from '../../components/header';
 import Head from 'next/head';
 import ErrorPage from 'next/error';
-import preview from '../api/preview.js';
 
 //ここがブログのポスト本体
 export default function BlogId({ blog }) {
