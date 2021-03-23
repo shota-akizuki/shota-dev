@@ -8,7 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "date-fns": "^2.19.0",
+    "dotenv": "^8.2.0",
     "next": "10.0.5",
     "next-themes": "^0.0.12",
     "node-fetch": "^2.6.1",
