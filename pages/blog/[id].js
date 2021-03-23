@@ -75,7 +75,7 @@ export const getStaticProps = async (context) => {
     .then((res) => res.json())
     .catch(() => null);
   // 下書きは draftKey を含む必要があるのでプレビューの時は追加
-  if (contex.preview) {
+  if (context.preview) {
     const data = await fetch(
       `https://shota-akizuki.microcms.io/api/v1/blog/${slug}${
         draftKey !== undefined ? `?draftKey=${draftKey}` : ''
