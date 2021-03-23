@@ -2,9 +2,13 @@ import styles from '../../styles/blog.module.scss';
 import { parseISO, format } from 'date-fns';
 import Header from '../../components/header';
 import Head from 'next/head';
+import ErrorPage from 'next/error';
 
 //ここがブログのポスト本体
 export default function BlogId({ blog }) {
+  if (!blog) {
+    return <ErrorPage statusCode={404} />;
+  }
   return (
     <>
       <Header titlePre="Blog" />
@@ -53,15 +57,22 @@ export const getStaticPaths = async () => {
     .then((res) => res.json())
     .catch(() => null);
   const paths = data.contents.map((content) => `/blog/${content.id}`);
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 };
 
 // データをテンプレートに受け渡す部分の処理
 export const getStaticProps = async (context) => {
   const id = context.params.id;
+  const preview = context.preview;
+  const previewData = context.previewData;
   const key = {
     headers: { 'X-API-KEY': process.env.API_KEY }
   };
+  // 下書きは draftKey を含む必要があるのでプレビューの時は追加
+  if (preview) {
+    'https://shota-akizuki.microcms.io/api/v1/blog' +
+      `?draftKey=${previewData.draftKey}`;
+  }
   const data = await fetch(
     'https://shota-akizuki.microcms.io/api/v1/blog/' + id,
     key
