@@ -3,6 +3,7 @@ import { parseISO, format } from 'date-fns';
 import Header from '../../components/header';
 import Head from 'next/head';
 import ErrorPage from 'next/error';
+import preview from '../api/preview.js';
 
 //ここがブログのポスト本体
 export default function BlogId({ blog }) {
@@ -53,11 +54,6 @@ export const getStaticPaths = async () => {
   const key = {
     headers: { 'X-API-KEY': process.env.API_KEY }
   };
-  // 下書きは draftKey を含む必要があるのでプレビューの時は追加
-  if (preview) {
-    'https://shota-akizuki.microcms.io/api/v1/blog' +
-      `?draftKey=${previewData.draftKey}`;
-  }
   const data = await fetch('https://shota-akizuki.microcms.io/api/v1/blog', key)
     .then((res) => res.json())
     .catch(() => null);
@@ -68,9 +64,16 @@ export const getStaticPaths = async () => {
 // データをテンプレートに受け渡す部分の処理
 export const getStaticProps = async (context) => {
   const id = context.params.id;
+  const preview = context.preview;
+  const previewData = context.previewData;
   const key = {
     headers: { 'X-API-KEY': process.env.API_KEY }
   };
+  // 下書きは draftKey を含む必要があるのでプレビューの時は追加
+  if (preview) {
+    'https://shota-akizuki.microcms.io/api/v1/blog' +
+      `?draftKey=${previewData.draftKey}`;
+  }
   const data = await fetch(
     'https://shota-akizuki.microcms.io/api/v1/blog/' + id,
     key
