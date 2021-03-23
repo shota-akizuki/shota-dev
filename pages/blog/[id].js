@@ -6,7 +6,7 @@ import ErrorPage from 'next/error';
 
 //ここがブログのポスト本体
 export default function BlogId({ blog }) {
-  if (!props.blog) {
+  if (!blog) {
     return <ErrorPage statusCode={404} />;
   }
   return (
