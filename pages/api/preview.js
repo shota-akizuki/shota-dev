@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 export default async (req, res) => {
   // クエリの確認
-  if (!req.query.slug) {
+  if (!req.query.id) {
     return res.status(404).end();
   }
   // 下書きのデータを取得
