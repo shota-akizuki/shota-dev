@@ -63,22 +63,26 @@ export const getStaticPaths = async () => {
 // データをテンプレートに受け渡す部分の処理
 export const getStaticProps = async (context) => {
   const id = context.params.id;
-  const preview = context.preview;
-  const previewData = context.previewData;
+  const slug = context.params?.id;
+  const draftKey = context.previewData?.draftKey;
   const key = {
     headers: { 'X-API-KEY': process.env.API_KEY }
   };
-  // 下書きは draftKey を含む必要があるのでプレビューの時は追加
-  if (preview) {
-    'https://shota-akizuki.microcms.io/api/v1/blog' +
-      `?draftKey=${previewData.draftKey}`;
-  }
   const data = await fetch(
     'https://shota-akizuki.microcms.io/api/v1/blog/' + id,
     key
   )
     .then((res) => res.json())
     .catch(() => null);
+  // 下書きは draftKey を含む必要があるのでプレビューの時は追加
+  if (context.preview) {
+    const data = await fetch(
+      `https://shota-akizuki.microcms.io/api/v1/blog/${slug}${
+        draftKey !== undefined ? `?draftKey=${draftKey}` : ''
+      }`,
+      key
+    );
+  }
   return {
     props: {
       blog: data
