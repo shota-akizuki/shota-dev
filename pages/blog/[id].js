@@ -71,7 +71,7 @@ export const getStaticProps = async (context) => {
 
   url = 'https://shota-akizuki.microcms.io/api/v1/blog/' + id;
   if (preview) {
-    url += `?draftKey=${previewData.draftKey}`;
+    url += `?draftKey=${draftKey}`;
   }
 
   const data = await fetch(url, key)
