@@ -2,9 +2,10 @@ import fetch from 'node-fetch';
 
 export default async (req, res) => {
   // クエリの確認
-  if (!req.query.id) {
-    return res.status(404).end();
+  if (req.query.secret !== 'SECRET_KEY' || !req.query.slug) {
+    return res.status(401).json({ message: 'Invalid token' });
   }
+
   // 下書きのデータを取得
   const content = await fetch(
     `https://shota-akizuki.microcms.io/api/v1/blog/${req.query.id}?fields=id&draftKey=${req.query.draftKey}`,
@@ -21,11 +22,11 @@ export default async (req, res) => {
 
   // プレビューデータを格納
   res.setPreviewData({
-    id: content.id,
+    slug: content.id,
     draftKey: req.query.draftKey
   });
 
-  // 詳細ページへリダイレクト
+  // // 詳細ページへリダイレクト
   res.writeHead(307, { Location: `blog/${content.id}` });
   res.end('Preview mode enabled');
 };
