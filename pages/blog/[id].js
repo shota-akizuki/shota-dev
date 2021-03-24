@@ -5,7 +5,7 @@ import Head from 'next/head';
 import ErrorPage from 'next/error';
 
 //ここがブログのポスト本体
-export default function BlogId({ blog }) {
+export default function BlogId({ blog, preview }) {
   if (!blog) {
     return <ErrorPage statusCode={404} />;
   }
@@ -31,9 +31,10 @@ export default function BlogId({ blog }) {
       <main className={styles.main}>
         <h1 className={styles.title}>{blog.title}</h1>
         <p className={styles.publishedAt}>
-          {format(parseISO(blog.publishedAt), 'PP')}
+          {preview
+            ? format(parseISO(blog.createdAt), 'PP')
+            : format(parseISO(blog.publishedAt), 'PP')}
         </p>
-
         <div
           className={styles.post}
           dangerouslySetInnerHTML={{
@@ -62,16 +63,18 @@ export const getStaticPaths = async () => {
 
 // データをテンプレートに受け渡す部分の処理
 export const getStaticProps = async (context) => {
+
+  // Cookieが設定されたプレビューモードのページをリクエストした場合:
+  // - context.previewはtrueになる。
+  // - context.previewDataはsetPreviewDataで使用されている引数と同じになる。
   const id = context.params.id;
-  const draftKey = context.previewData?.draftKey;
-  const preview = context.preview;
   const key = {
     headers: { 'X-API-KEY': process.env.API_KEY }
   };
-
-  let url = 'https://shota-akizuki.microcms.io/api/v1/blog/' + id;
-  if (preview) {
-    url += `?draftKey=${draftKey}`;
+  let url = `https://shota-akizuki.microcms.io/api/v1/blog/` + id;
+  // context.previewがtrueの場合、${slug}?draftKey=${draftKey} をAPIエンドポイントに追加
+  if (context.preview) {
+    url += `?draftKey=${context.previewData.draftKey}`;
   }
 
   const data = await fetch(url, key)
@@ -79,7 +82,8 @@ export const getStaticProps = async (context) => {
     .catch(() => null);
   return {
     props: {
-      blog: data
+      blog: data,
+      preview: context.preview ? context.preview : null
     }
   };
 };
