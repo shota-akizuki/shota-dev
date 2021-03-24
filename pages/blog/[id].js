@@ -63,6 +63,7 @@ export const getStaticPaths = async () => {
 
 // データをテンプレートに受け渡す部分の処理
 export const getStaticProps = async (context) => {
+
   // Cookieが設定されたプレビューモードのページをリクエストした場合:
   // - context.previewはtrueになる。
   // - context.previewDataはsetPreviewDataで使用されている引数と同じになる。
@@ -75,6 +76,7 @@ export const getStaticProps = async (context) => {
   if (context.preview) {
     url += `?draftKey=${context.previewData.draftKey}`;
   }
+
   const data = await fetch(url, key)
     .then((res) => res.json())
     .catch(() => null);
