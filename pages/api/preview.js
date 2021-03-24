@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 export default async (req, res) => {
   // クエリの確認
-  if (req.query.secret !== 'SECRET_KEY' || !req.query.slug) {
+  if (req.query.secret !== process.env.SECRET_KEY || !req.query.slug) {
     return res.status(401).json({ message: 'Invalid token' });
   }
 
