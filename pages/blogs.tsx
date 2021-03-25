@@ -9,7 +9,8 @@ export default function Blogs({ blog }) {
   return (
     <div className={styles.blogs}>
       <Header titlePre="Blogs" />
-      <ul style={{ marginTop: 40 }}>
+      <h1 style={{ marginBottom: 24 }}>Posts</h1>
+      <ul style={{ marginTop: 32 }}>
         {blog.map((blog) => (
           <li key={blog.id}>
             <span>{format(parseISO(blog.publishedAt), 'PP')}</span>

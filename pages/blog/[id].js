@@ -44,15 +44,15 @@ export default function BlogId({ blog, preview }) {
             ? format(parseISO(blog.createdAt), 'PP')
             : format(parseISO(blog.publishedAt), 'PP')}
         </p>
+        <p className={styles.category}>
+          {blog.category && `${blog.category.name}`}
+        </p>
         <div
           className={styles.post}
           dangerouslySetInnerHTML={{
             __html: `${blog.contents}`
           }}
         />
-        <p className={styles.category}>
-          Category…{blog.category && `${blog.category.name}`}
-        </p>
       </main>
     </>
   );

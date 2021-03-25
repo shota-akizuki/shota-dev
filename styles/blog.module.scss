@@ -2,18 +2,35 @@
 
 .main {
   margin: auto;
-  max-width: 42rem;
+  max-width: 32rem;
 }
 
 .title {
   font-size: 1.6rem;
   margin-top: 0;
-  padding: 16px;
+  padding-left: 16px;
 }
 
 .publishedAt {
-  margin-bottom: 24px;
-  padding: 16px;
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 0px 16px;
+}
+//下書き用
+.createdAt {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 0px 16px;
+}
+.category {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #dbe2ec;
+  margin-top: 32px;
+  font-size: 16px;
+  color: #5f6c84;
+  //上下と左右を指定
+  padding: 0px 4px;
 }
 
 .post {
@@ -52,10 +69,4 @@
   & > div {
     padding: 16px;
   }
-}
-
-.category {
-  margin-top: 32px;
-  font-size: 16px;
-  margin-left: 16px;
 }
