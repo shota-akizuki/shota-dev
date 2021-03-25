@@ -3,9 +3,19 @@ import { parseISO, format } from 'date-fns';
 import Header from '../../components/header';
 import Head from 'next/head';
 import ErrorPage from 'next/error';
+import { useEffect } from 'react';
 
-//ここがブログのポスト本体
+//ブログポスト本体のコンポーネント
 export default function BlogId({ blog, preview }) {
+  //Twitterの埋め込みをマウント時に取得する
+  useEffect(() => {
+    console.log('useEffect!!');
+    const script = document.createElement('script');
+    script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+    script.setAttribute('async', 'true');
+    document.head.appendChild(script);
+  }, []);
+  //ブログがない時のエラー処理
   if (!blog) {
     return <ErrorPage statusCode={404} />;
   }
@@ -63,7 +73,6 @@ export const getStaticPaths = async () => {
 
 // データをテンプレートに受け渡す部分の処理
 export const getStaticProps = async (context) => {
-
   // Cookieが設定されたプレビューモードのページをリクエストした場合:
   // - context.previewはtrueになる。
   // - context.previewDataはsetPreviewDataで使用されている引数と同じになる。
