@@ -29,6 +29,7 @@
   -webkit-text-fill-color: transparent;
   /* textの形にbackgroundをくり抜く */
   -webkit-background-clip: text;
+  /* web-kitに対応してないブラウザで表示する色 */
   background-clip: black;
 }
 

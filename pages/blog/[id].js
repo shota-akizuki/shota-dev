@@ -9,7 +9,6 @@ import { useEffect } from 'react';
 export default function BlogId({ blog, preview }) {
   //Twitterの埋め込みをマウント時に取得する
   useEffect(() => {
-    console.log('useEffect!!');
     const script = document.createElement('script');
     script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
     script.setAttribute('async', 'true');
