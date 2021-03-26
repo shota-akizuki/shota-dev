@@ -15,8 +15,7 @@ export default function Home() {
           className={sharedStyles.title}
           style={{
             fontSize: 20,
-            marginBottom: 24,
-            color: '#333'
+            marginBottom: 24
           }}
         >
           Minimalistic, Practical, Beautiful.
@@ -25,7 +24,8 @@ export default function Home() {
         <h2
           style={{
             marginTop: 80,
-            fontSize: 24
+            fontSize: 24,
+            color: 'var(--color-accents-4)'
           }}
         >
           React & Next.js Web Development
