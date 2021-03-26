@@ -2,25 +2,12 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-size: 20px;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 :root {
-  --gap-quarter: 0.25rem;
-  --gap-half: 0.5rem;
-  --gap: 1rem;
-  --gap-double: 2rem;
-
   --bg: #fff;
   --fg: #000;
   --accents-1: #111;
@@ -28,24 +15,11 @@ a {
   --accents-3: #888;
   --geist-foreground: #000;
 
-  --radius: 8px;
-
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   --font-mono: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-size: 20px;
 }
 
 body {
@@ -70,35 +44,12 @@ body {
   align-items: center;
 }
 
-@media (max-width: 600px) {
-  .feature div {
-    flex-basis: auto;
-    padding-left: 0;
-  }
-
-  .feature h4 {
-    font-size: 0.75rem;
-  }
-}
-
 a {
   color: #0070f3;
   text-decoration: none;
 }
 a:hover {
   color: #3291ff;
-}
-
-.links {
-  margin-top: var(--gap);
-}
-
-.title {
-  text-align: center;
-}
-
-.logo :global(svg) {
-  max-width: calc(100vw - var(--gap-double));
 }
 
 h1 {
@@ -119,7 +70,7 @@ p {
   color: #888;
   font-weight: 400;
   font-size: 0.94rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 ul {
   color: #888;
@@ -130,16 +81,6 @@ ul {
     font-size: 0.95rem;
     letter-spacing: 0;
   }
-}
-
-footer {
-  padding: 2em 0;
-  text-align: center;
-}
-
-footer span {
-  color: #777777;
-  font-size: 16px;
 }
 
 /*Dark Theme用に指定*/
@@ -165,23 +106,17 @@ footer span {
   --color-border: #dfdfdf;
   --color-link: #181f2a;
 }
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
 }
+/* パディングとボーダーを幅と高さに含める */
 * {
   box-sizing: border-box;
 }
 
 button {
-  padding: 3px;
   height: 40px;
   width: 40px;
   border: 0;

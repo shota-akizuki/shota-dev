@@ -3,11 +3,11 @@ import Head from 'next/head';
 import ExtLink from './ext-link';
 import { useRouter } from 'next/router';
 import styles from '../styles/header.module.css';
+import ThemeChanger from './ThemeChanger';
 
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Home', page: '/' },
-  { label: 'Blog', page: '/blogs' },
-  { label: 'Contact', page: '/contact' }
+  { label: 'Blog', page: '/blogs' }
 ];
 
 export default ({ titlePre = '' }) => {
@@ -28,6 +28,9 @@ export default ({ titlePre = '' }) => {
           content="Minimalistic, Practical, Beautiful."
         />
       </Head>
+      {/* <div>
+        <ThemeChanger />
+      </div> */}
       <ul>
         {navItems.map(({ label, page, link }) => (
           <li key={label}>
