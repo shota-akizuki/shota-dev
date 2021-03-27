@@ -4,6 +4,7 @@ import Header from '../../components/header';
 import Head from 'next/head';
 import ErrorPage from 'next/error';
 import { useEffect } from 'react';
+import { Footer } from '../../components/footer';
 
 //ブログポスト本体のコンポーネント
 export default function BlogId({ blog, preview }) {
@@ -53,6 +54,7 @@ export default function BlogId({ blog, preview }) {
             __html: `${blog.contents}`
           }}
         />
+        <Footer style={{ margin: 16 }} />
       </main>
     </>
   );

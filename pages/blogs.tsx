@@ -2,25 +2,29 @@ import Link from 'next/link';
 import Header from '../components/header';
 import { parseISO, format } from 'date-fns';
 import styles from '../styles/blogs.module.css';
+import { Footer } from '../components/footer';
 
 //ブログ一覧を表示するコンポーネント
 
 export default function Blogs({ blog }) {
   return (
-    <div className={styles.blogs}>
+    <>
       <Header titlePre="Blogs" />
-      <h1 style={{ marginBottom: 24 }}>Posts</h1>
-      <ul style={{ marginTop: 32 }}>
-        {blog.map((blog) => (
-          <li key={blog.id}>
-            <span>{format(parseISO(blog.publishedAt), 'PP')}</span>
-            <Link href={`blog/${blog.id}`}>
-              <a>{blog.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+      <div className={styles.blogs}>
+        <h1 style={{ marginBottom: 24 }}>Posts</h1>
+        <ul style={{ marginTop: 32 }}>
+          {blog.map((blog) => (
+            <li key={blog.id}>
+              <span>{format(parseISO(blog.publishedAt), 'PP')}</span>
+              <Link href={`blog/${blog.id}`}>
+                <a>{blog.title}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <Footer />
+    </>
   );
 }
 
