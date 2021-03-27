@@ -28,12 +28,12 @@ export default ({ titlePre = '' }) => {
           content="Minimalistic, Practical, Beautiful."
         />
       </Head>
-      {/* <div>
-        <ThemeChanger />
-      </div> */}
       <ul>
+        <li className={styles.themeChanger}>
+          <ThemeChanger />
+        </li>
         {navItems.map(({ label, page, link }) => (
-          <li key={label}>
+          <li key={label} className={styles.navItems}>
             {page ? (
               <Link href={page}>
                 <a className={pathname === page ? 'active' : undefined}>

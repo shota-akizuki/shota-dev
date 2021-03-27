@@ -15,7 +15,8 @@ export default function Home() {
           sites.
         </p>
         <p>
-          大阪でフロントエンドエンジニア・デザイナーをしています。Web制作・開発について何か僕にできることがあれば、気軽にご連絡ください。
+          大阪でWeb
+          デザイナー・エンジニアをしています。Web制作・開発について何か僕にできることがあれば、気軽にご連絡ください。
         </p>
         <hr className={styles.divider} />
         <ul>
@@ -37,7 +38,7 @@ export default function Home() {
             Mail
             <ExtLink href="mailto:shota0609akizuki@gmail.com">
               {' '}
-              @shota0609akizuki@gmail.com
+              shota0609akizuki@gmail.com
             </ExtLink>
           </li>
           <li>

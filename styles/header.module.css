@@ -9,20 +9,31 @@
 
 .header ul {
   display: flex;
+  /* 左右を軸に右から始める */
   justify-content: flex-end;
-
+  /* 上下の真ん中を揃える */
+  align-items: center;
   list-style: none;
   padding: 0;
 }
 
-.header ul li {
+.navItems {
   padding: 0 10px;
+}
+
+.themeChanger {
+  margin-right: auto;
+  padding: 0;
 }
 
 .header :global(a) {
   color: var(--color-accents-4);
   font-weight: 400;
   text-decoration: underline;
+}
+
+.header div {
+  display: inline-block;
 }
 
 .header :global(a.active) {
