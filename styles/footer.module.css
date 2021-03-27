@@ -1,12 +1,10 @@
 .footer {
-  height: 120px;
-  margin: 160px auto;
+  margin: 80px auto;
   width: 88%;
   max-width: 32rem;
 }
 
 .footer span {
-  padding: 1px;
   color: (--color-accents-1);
   font-size: 16px;
 }

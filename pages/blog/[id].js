@@ -54,8 +54,8 @@ export default function BlogId({ blog, preview }) {
             __html: `${blog.contents}`
           }}
         />
-        <Footer style={{ margin: 16 }} />
       </main>
+      <Footer />
     </>
   );
 }

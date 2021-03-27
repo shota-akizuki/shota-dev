@@ -1,33 +1,32 @@
 //ブログ本体のスタイル
 
 .main {
+  width: 88%;
   margin: auto;
   max-width: 32rem;
 }
 
 .title {
   font-size: 1.6rem;
-  margin-top: 0;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 .publishedAt {
   display: inline-block;
   margin-bottom: 16px;
-  padding: 0px 16px;
+  padding: 0;
 }
 //下書き用
 .createdAt {
   display: inline-block;
   margin-bottom: 16px;
-  padding: 0px 16px;
+  padding: 0;
 }
 .category {
   display: inline-block;
   border-radius: 5px;
   background-color: #dbe2ec;
   margin-top: 32px;
+  margin-left: 16px;
   font-size: 16px;
   color: #5f6c84;
   //上下と左右を指定
@@ -40,7 +39,7 @@
     font-weight: bold;
     margin: 40px 0 20px;
     background-color: #eee;
-    padding: 10px 20px;
+    // padding: 10px 20px;
     border-radius: 5px;
   }
 
@@ -53,7 +52,7 @@
 
   & > p {
     font-size: 16px;
-    padding: 16px;
+    padding: 16px 0px;
     line-height: 1.8;
     color: var(--color-accents-1);
     letter-spacing: 0.2px;
