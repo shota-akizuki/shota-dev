@@ -10,15 +10,13 @@ export default function Home() {
       <div className={styles.main}>
         <h1>Shota Akizuki</h1>
         <p>
-          I’m a developer, designer, and creator. I work at a company as a
-          Junior Developer in Osaka. I enjoy working and crafting beautiful web
-          sites.
+          I’m a developer, designer, and creator. I work as a Junior Developer
+          in Osaka. I enjoy working and crafting beautiful web sites.
         </p>
         <p>
-          大阪でWeb
-          デザイナー・エンジニアをしています。Web制作・開発について何か僕にできることがあれば、気軽にご連絡ください。
+          大阪でWebデザイナー・エンジニアをしています。Web制作・開発についてできることがあれば、お気軽にご相談ください。
         </p>
-        <hr className={styles.divider} />
+        <p className={styles.divider} />
         <ul>
           <li>
             Twitter
