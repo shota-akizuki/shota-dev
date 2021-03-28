@@ -10,11 +10,22 @@
 }
 
 .main li {
-  color: #777;
+  display: flex;
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+.main svg {
+  margin-right: 8px;
 }
 
 .main a {
   cursor: pointer;
+}
+
+.main p {
+  color: var(--color-accents-1);
+  font-size: 0.9rem;
 }
 
 .divider {

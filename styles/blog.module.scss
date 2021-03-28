@@ -66,6 +66,9 @@
     font-size: 16px;
     margin: 0;
   }
+  & > ul li {
+    color: var(--color-accents-1);
+  }
   & > div {
     padding: 16px;
   }
