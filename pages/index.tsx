@@ -13,13 +13,13 @@ const contacts = [
     Comp: Twitter,
     alt: 'twitter icon',
     link: 'https://twitter.com/shota_akizuki',
-    label: 'shota_akizuki'
+    label: '@shota_akizuki'
   },
   {
     Comp: GitHub,
     alt: 'github icon',
     link: 'https://github.com/shota-akizuki',
-    label: 'shota-akizuki'
+    label: '@shota-akizuki'
   },
   {
     Comp: Envelope,
@@ -31,7 +31,7 @@ const contacts = [
     Comp: Instagram,
     alt: 'instagram icon',
     link: 'https://instagram.com/shota_akizuki',
-    label: 'shota_akizuki'
+    label: '@shota_akizuki'
   }
 ];
 
@@ -60,7 +60,7 @@ export default function Home() {
                   <Comp
                     style={{ height: 24, fill: 'var(--color-accents-1)' }}
                   />
-                  <ExtLink href={link}> @{label}</ExtLink>
+                  <ExtLink href={link}> {label}</ExtLink>
                 </li>
               </>
             );
