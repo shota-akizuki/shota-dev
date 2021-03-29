@@ -8,11 +8,39 @@ import Envelope from '../components/svgs/envelope';
 import Instagram from '../components/svgs/instagram';
 import React from 'react';
 
+const contacts = [
+  {
+    Comp: Twitter,
+    alt: 'twitter icon',
+    link: 'https://twitter.com/shota_akizuki',
+    label: 'shota_akizuki'
+  },
+  {
+    Comp: GitHub,
+    alt: 'github icon',
+    link: 'https://github.com/shota-akizuki',
+    label: 'shota-akizuki'
+  },
+  {
+    Comp: Envelope,
+    alt: 'envelope icon',
+    link: 'mailto:shota0609akizuki@gmail.com',
+    label: 'shota0609akizuki@gmail.com'
+  },
+  {
+    Comp: Instagram,
+    alt: 'instagram icon',
+    link: 'https://instagram.com/shota_akizuki',
+    label: 'shota_akizuki'
+  }
+];
+
 export default function Home() {
   return (
     <>
       <Header titlePre="Home" />
       <div className={styles.main}>
+        <div></div>
         <h1>Shota Akizuki</h1>
         <p>
           I’m a developer, designer, and creator. I work as a Developer in
@@ -24,35 +52,19 @@ export default function Home() {
         </p>
         <p className={styles.divider} />
         <ul>
-          <li>
-            <Twitter style={{ fill: 'var(--color-accents-1)', height: 24 }} />
-
-            <ExtLink href="https://twitter.com/shota_akizuki">
-              {' '}
-              @shota_akizuki
-            </ExtLink>
-          </li>
-          <li>
-            <GitHub style={{ fill: 'var(--color-accents-1)', height: 24 }} />
-            <ExtLink href="https://github.com/shota-akizuki">
-              {' '}
-              @shota-akizuki
-            </ExtLink>
-          </li>
-          <li>
-            <Envelope style={{ fill: 'var(--color-accents-1)', height: 24 }} />
-            <ExtLink href="mailto:shota0609akizuki@gmail.com">
-              {' '}
-              shota0609akizuki@gmail.com
-            </ExtLink>
-          </li>
-          <li>
-            <Instagram style={{ fill: 'var(--color-accents-1)', height: 24 }} />
-            <ExtLink href="https://instagram.com/shota_akizuki">
-              {' '}
-              @shota_akizuki
-            </ExtLink>
-          </li>
+          {contacts.map(({ Comp, link, alt, label }) => {
+            return (
+              <>
+                <li key={alt}>
+                  {' '}
+                  <Comp
+                    style={{ height: 24, fill: 'var(--color-accents-1)' }}
+                  />
+                  <ExtLink href={link}> @{label}</ExtLink>
+                </li>
+              </>
+            );
+          })}
         </ul>
       </div>
       <Footer />
