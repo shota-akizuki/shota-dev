@@ -40,7 +40,6 @@ export default function Home() {
     <>
       <Header titlePre="Home" />
       <div className={styles.main}>
-        <div></div>
         <h1>Shota Akizuki</h1>
         <p>
           I’m a developer, designer, and creator. I work as a Developer in
@@ -52,18 +51,13 @@ export default function Home() {
         </p>
         <p className={styles.divider} />
         <ul>
-          {contacts.map(({ Comp, link, alt, label }) => {
+          {contacts.map(({ Comp, link, label }) => {
             return (
-              <>
-                <li key={alt}>
-                  {' '}
-                  <Comp
-                    key={alt}
-                    style={{ height: 24, fill: 'var(--color-accents-1)' }}
-                  />
-                  <ExtLink href={link}> {label}</ExtLink>
-                </li>
-              </>
+              <li key={link}>
+                {' '}
+                <Comp style={{ height: 24, fill: 'var(--color-accents-1)' }} />
+                <ExtLink href={link}> {label}</ExtLink>
+              </li>
             );
           })}
         </ul>
