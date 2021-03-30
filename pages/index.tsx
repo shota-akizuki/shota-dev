@@ -48,7 +48,7 @@ export default function Home() {
           contact with me.
         </p>
         <p>
-          大阪でWebデザイナー・エンジニアをしています。Web制作・開発についてできることがあれば、お気軽にご相談ください。
+          大阪でWebデザイナー・エンジニアをしています。Web制作・開発について私にできることがあれば、お気軽にご相談ください。
         </p>
         <p className={styles.divider} />
         <ul>
@@ -58,6 +58,7 @@ export default function Home() {
                 <li key={alt}>
                   {' '}
                   <Comp
+                    key={alt}
                     style={{ height: 24, fill: 'var(--color-accents-1)' }}
                   />
                   <ExtLink href={link}> {label}</ExtLink>
