@@ -7,7 +7,7 @@
 }
 
 .timeline p {
-  color: #8a929f;
+  color: var(--color-home-text);
   margin: 0;
   font-size: 0.8rem;
 }
@@ -20,8 +20,11 @@
   font-size: 1.7rem;
 }
 
+.timeline a {
+  font-size: 0.8rem;
+}
+
 .divider {
   border-top: 1.6px solid #bbb;
-  border-radius: 5px;
-  margin: 36px 28px;
+  margin: 36px 0px;
 }

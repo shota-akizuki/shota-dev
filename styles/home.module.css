@@ -24,13 +24,12 @@
 }
 
 .main p {
-  color: #8a929f;
+  color: var(--color-home-text);
   font-size: 0.8rem;
 }
 
 .divider {
   border-top: 1.6px solid #bbb;
-  border-radius: 5px;
   margin: 36px 0px;
 }
 

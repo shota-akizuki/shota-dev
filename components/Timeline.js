@@ -5,6 +5,10 @@ const Year = ({ children }) => {
   return <h3>{children}</h3>;
 };
 
+const Divider = () => {
+  return <div className={styles.divider}></div>;
+};
+
 export default function Timeline() {
   const [isShowingFullTimeline, showFullTimeline] = useState(false);
 
@@ -14,8 +18,8 @@ export default function Timeline() {
         <h1>Timeline</h1>
         <Year>2021</Year>
         <ul>
-          <li>Joined ▼Riverth Design</li>
-          <p>大阪のデザイン事務所でwebデザイナーとして働くことになりました。</p>
+          {/* <li>Joined ▼Riverth Design</li>
+          <p>大阪のデザイン事務所でwebデザイナーとして働くことになりました。</p> */}
           <li>Got Married</li>
           <p>いい出会いに恵まれました。感謝。</p>
           <li>Launched the first iOS app with Flutter</li>
@@ -23,7 +27,7 @@ export default function Timeline() {
             アプリリリースを経験。その後、Webに軸足を移すためFlutter大学を卒業。
           </p>
         </ul>
-        <p className={styles.divider}></p>
+        <Divider />
         <Year>2020</Year>
         <ul>
           <li>Started a Flutter Team Project.</li>
@@ -50,26 +54,30 @@ export default function Timeline() {
 const FullTimeline = () => (
   <>
     <div className={styles.timeline}>
-      <p className={styles.divider}></p>
-      <Year>2017</Year>
+      <Divider />
+      <Year>2017〜2019</Year>
       <ul>
-        <p>やりたいことがなくなってしまったので、いろいろと模索する期間。</p>
+        <p>
+          音楽活動休止。やりたかった英語を勉強したり、ひたすら読書したり、メモを録り始めてみたり、とにかく模索する期間でした。
+        </p>
       </ul>
-      <p className={styles.divider}></p>
+      <Divider />
       <Year>2016</Year>
       <ul>
-        <p>音楽活動休止。</p>
+        <p>
+          とにかくライブに打ち込みました。サーキットライブに出演、東京に遠征、ワンマンライブにも挑戦。
+        </p>
       </ul>
-      <p className={styles.divider}></p>
+      <Divider />
       <Year>2011</Year>
       <ul>
-        <li>Graduated Osaka Kyoiku University</li>
-        <p>大学卒業後、プロのミュージシャンを目指し音楽活動をしていく。</p>
+        <li>Graduated College</li>
+        <p>大学卒業後、プロのミュージシャンを目指し音楽活動を開始。</p>
       </ul>
-      <p className={styles.divider}></p>
+      <Divider />
       <Year>2007</Year>
       <ul>
-        <li>Entered Osaka Kyoiku University</li>
+        <li>Started Osaka Kyoiku University</li>
         <p>
           大阪教育大学大学に入学。18年間住んだ生まれ故郷の愛媛から大阪に引越し。
         </p>
