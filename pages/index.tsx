@@ -7,7 +7,7 @@ import GitHub from '../components/svgs/github';
 import Envelope from '../components/svgs/envelope';
 import Instagram from '../components/svgs/instagram';
 import React from 'react';
-import Timeline from '../components/timeline';
+import Timeline from '../components/Timeline';
 
 const contacts = [
   {
