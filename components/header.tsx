@@ -16,7 +16,7 @@ export default ({ titlePre = '' }) => {
   return (
     <header className={styles.header}>
       <Head>
-        <title>{titlePre ? `${titlePre} |` : ''} Shota Dev</title>
+        <title>{titlePre ? `${titlePre} |` : ''} Shota Akizuki</title>
         <meta name="description" content="Shota's Blog" />
         <meta name="og:title" content="Shota Dev" />
         <meta property="og:image" content="https://shota-dev.ml/mantra.jpeg" />

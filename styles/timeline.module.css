@@ -1,0 +1,30 @@
+.timeline li {
+  color: var(--color-accents-1);
+  font-weight: bold;
+  padding: 0;
+  margin: 8px 0;
+  font-size: 0.8rem;
+}
+
+.timeline p {
+  color: var(--color-home-text);
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.timeline h3 {
+  font-size: 1rem;
+}
+
+.timeline h1 {
+  font-size: 1.7rem;
+}
+
+.timeline a {
+  font-size: 0.8rem;
+}
+
+.divider {
+  border-top: 1.6px solid #bbb;
+  margin: 36px 0px;
+}

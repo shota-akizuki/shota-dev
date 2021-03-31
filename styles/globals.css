@@ -90,6 +90,7 @@ ul {
   --color-accents-2: #777777;
   --color-accents-3: #888;
   --color-accents-4: #5f6c84;
+  --color-home-text: #3b4450;
   --color-bg: #fff;
   --color-code-bg: #fafafa;
   --color-border: #eaeaea;
@@ -101,6 +102,7 @@ ul {
   --color-accents-2: #fff;
   --color-accents-3: #fff;
   --color-accents-4: #fff;
+  --color-home-text: #8a929f;
   --color-bg: #000;
   --color-code-bg: #2d2d2d;
   --color-border: #dfdfdf;
