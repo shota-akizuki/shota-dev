@@ -18,8 +18,6 @@ export default function Timeline() {
         <h1>Timeline</h1>
         <Year>2021</Year>
         <ul>
-          {/* <li>Joined ▼Riverth Design</li>
-          <p>大阪のデザイン事務所でwebデザイナーとして働くことになりました。</p> */}
           <li>Got Married</li>
           <p>いい出会いに恵まれました。感謝。</p>
           <li>Launched the first iOS app with Flutter</li>
@@ -30,7 +28,7 @@ export default function Timeline() {
         <Divider />
         <Year>2020</Year>
         <ul>
-          <li>Started a Flutter Team Project.</li>
+          <li>Started a Flutter Team Project</li>
           <p>
             アプリのチーム開発にジョイン。わからないことだらけ。しかし、3人と少数だったのでコミットせざるをえない状況が刺激になってとても良かった。
           </p>
@@ -56,16 +54,18 @@ const FullTimeline = () => (
     <div className={styles.timeline}>
       <Divider />
       <Year>2017〜2019</Year>
+      <li>Ended the band</li>
       <ul>
         <p>
-          音楽活動休止。やりたかった英語を勉強したり、ひたすら読書したり、メモを録り始めてみたり、とにかく模索する期間でした。
+          音楽活動休止。英語を勉強したり、ひたすら読書したり、メモ魔になってみたり、とにかく模索する期間でした。
         </p>
       </ul>
       <Divider />
-      <Year>2016</Year>
+      <Year>2012〜2016</Year>
+      <li>Started an Independent rock band</li>
       <ul>
         <p>
-          とにかくライブに打ち込みました。サーキットライブに出演、東京に遠征、ワンマンライブにも挑戦。
+          とにかく音楽に打ち込みました。インディーズバンドとして、制作、リリース、ラジオ出演、ライブツアー、サーキットライブ出演、東京遠征、ワンマンライブにも挑戦。多くの貴重な経験をしました。
         </p>
       </ul>
       <Divider />
@@ -79,7 +79,7 @@ const FullTimeline = () => (
       <ul>
         <li>Started Osaka Kyoiku University</li>
         <p>
-          大阪教育大学大学に入学。18年間住んだ生まれ故郷の愛媛から大阪に引越し。
+          大阪教育大学に入学。18年間住んだ生まれ故郷の愛媛から大阪に引越し。
         </p>
       </ul>
     </div>
