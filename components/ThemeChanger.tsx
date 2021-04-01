@@ -11,9 +11,9 @@ const ThemeChanger = () => {
   return (
     <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
       {mounted && theme === 'dark' ? (
-        <DarkIcon style={{ height: 16 }} />
-      ) : (
         <LightIcon style={{ height: 16 }} />
+      ) : (
+        <DarkIcon style={{ height: 16 }} />
       )}
     </button>
   );

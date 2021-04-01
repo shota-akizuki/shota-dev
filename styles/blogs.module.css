@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+.blogs li {
+  font-size: 0.98rem;
+}
+
 .blogs span {
   margin-right: 16px;
 }
