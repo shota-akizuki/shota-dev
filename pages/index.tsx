@@ -46,11 +46,10 @@ export default function Home() {
       <div className={styles.main}>
         <h1>Shota Akizuki</h1>
         <p>
-          I’m a developer, designer, and creator. I work as a Developer in
-          Osaka. Feel free to contact with me.
+          I’m a developer, designer, and creator. Feel free to contact with me.
         </p>
         <p>
-          大阪でWebデザイナー・エンジニアをしています。Web制作・開発について私にできることがあれば、お気軽にご相談ください。
+          Web制作・開発について私にできることがあれば、お気軽にご相談ください。
         </p>
         <Divider />
         <Timeline />
