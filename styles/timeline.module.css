@@ -17,6 +17,9 @@
 }
 
 .timeline h1 {
+  background: var(--color-accents-1);
+  -webkit-background-clip: text;
+  background-clip: #111;
   font-size: 1.7rem;
 }
 

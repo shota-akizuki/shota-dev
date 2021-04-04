@@ -15,7 +15,7 @@ export default function Timeline() {
   return (
     <>
       <div className={styles.timeline}>
-        <h1>Timeline</h1>
+        <h1 className={styles.title}>Timeline</h1>
         <Year>2021</Year>
         <ul>
           <li>Got Married</li>
