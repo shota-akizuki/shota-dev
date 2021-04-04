@@ -37,13 +37,6 @@ body {
   overflow-x: hidden;
 }
 
-.links {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-
 a {
   color: #0070f3;
   text-decoration: none;

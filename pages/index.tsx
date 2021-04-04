@@ -48,9 +48,7 @@ export default function Home() {
         <p>
           I’m a developer, designer, and creator. Feel free to contact with me.
         </p>
-        <p>
-          Web制作・開発について私にできることがあれば、お気軽にご相談ください。
-        </p>
+        <p>Web開発について私にできることがあれば、お気軽にご相談ください。</p>
         <Divider />
         <Timeline />
         <Divider />
@@ -58,8 +56,7 @@ export default function Home() {
           {contacts.map(({ Comp, link, label }) => {
             return (
               <li key={link}>
-                {' '}
-                <Comp style={{ height: 24, fill: 'var(--color-accents-1)' }} />
+                <Comp style={{ height: 20, fill: 'var(--color-accents-1)' }} />
                 <ExtLink href={link}> {label}</ExtLink>
               </li>
             );

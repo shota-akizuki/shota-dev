@@ -5,6 +5,6 @@
 }
 
 .footer span {
-  color: (--color-accents-1);
+  color: var(--color-accents-1);
   font-size: 16px;
 }
