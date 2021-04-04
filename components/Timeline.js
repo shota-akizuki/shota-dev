@@ -22,7 +22,7 @@ export default function Timeline() {
           <p>いい出会いに恵まれました。感謝。</p>
           <li>Launched the first iOS app with Flutter</li>
           <p>
-            アプリリリースを経験。その後、Webに軸足を移すためFlutter大学を卒業。
+            アプリリリースを経験。Web開発(React)に軸足を移すため、Flutter大学を卒業。
           </p>
         </ul>
         <Divider />
