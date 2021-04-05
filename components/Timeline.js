@@ -21,23 +21,17 @@ export default function Timeline() {
           <li>Got Married</li>
           <p>いい出会いに恵まれました。感謝。</p>
           <li>Launched the first iOS app with Flutter</li>
-          <p>
-            アプリリリースを経験。Web開発(React)に軸足を移すため、Flutter大学を卒業。
-          </p>
+          <p>iOSアプリを初リリース。その後、Web開発(React)に軸足を移す。</p>
         </ul>
         <Divider />
         <Year>2020</Year>
         <ul>
           <li>Started a Flutter Team Project</li>
           <p>
-            アプリのチーム開発にジョイン。わからないことだらけ。しかし、3人と少数だったのでコミットせざるをえない状況が刺激になってとても良かった。
+            オンラインサロン内のアプリのチーム開発にジョイン。3人と少数だったのでコミットせざるをえない状況がとても刺激になった。
           </p>
-          <li>Joined KBOY Flutter University</li>
-          <p>エンジニアとして修行するためKBOYさんのオンラインサロンに参加。</p>
           <li>Learned How To Program</li>
-          <p>
-            COVID-19によるステイホーム期間中にプログラミングを始めることに。
-          </p>
+          <p>COVID-19によるステイホーム期間中にプログラミングを始める。</p>
         </ul>
         {isShowingFullTimeline ? (
           <FullTimeline />

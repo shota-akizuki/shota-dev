@@ -19,3 +19,10 @@
   width: 88%;
   max-width: 32rem;
 }
+
+.blogs h1 {
+  background: linear-gradient(45deg, #0d66ea 0%, #1bd0d1 40%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: #111;
+}
