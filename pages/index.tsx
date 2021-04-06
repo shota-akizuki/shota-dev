@@ -48,7 +48,7 @@ export default function Home() {
         <p>
           I’m a developer, designer, and creator. Feel free to contact with me.
         </p>
-        <p>Web開発について私にできることがあれば、お気軽にご相談ください。</p>
+
         <Divider />
         <Timeline />
         <Divider />

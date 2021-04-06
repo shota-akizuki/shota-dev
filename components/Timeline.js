@@ -20,15 +20,15 @@ export default function Timeline() {
         <ul>
           <li>Got Married</li>
           <p>いい出会いに恵まれました。感謝。</p>
-          <li>Launched the first iOS app with Flutter</li>
-          <p>iOSアプリを初リリース。その後、Web開発(React)に軸足を移す。</p>
+          <li>Launched my first iOS app.</li>
+          <p>iOSアプリを初リリース。その後、Web(React)に軸足を移す。</p>
         </ul>
         <Divider />
         <Year>2020</Year>
         <ul>
           <li>Started a Flutter Team Project</li>
           <p>
-            オンラインサロン内のアプリのチーム開発にジョイン。3人と少数だったのでコミットせざるをえない状況がとても刺激になった。
+            アプリ開発チーム（Flutter）にジョイン。3人と少数だったのでコミットせざるをえない状況がとても刺激になった。
           </p>
           <li>Learned How To Program</li>
           <p>COVID-19によるステイホーム期間中にプログラミングを始める。</p>
@@ -51,7 +51,7 @@ const FullTimeline = () => (
       <li>Ended the band</li>
       <ul>
         <p>
-          音楽活動休止。ミニマリズムにハマる、英語を勉強する、ひたすら読書、メモ魔になってみる、とにかく模索する期間でした。
+          音楽活動休止。ミニマリズムにハマる、英語を勉強する、ひたすら読書、メモ魔になってみる、とにかく模索する期間。
         </p>
       </ul>
       <Divider />
@@ -59,7 +59,7 @@ const FullTimeline = () => (
       <li>Started an Independent rock band</li>
       <ul>
         <p>
-          とにかく音楽に打ち込みました。インディーズバンドとして、制作、リリース、ラジオ出演、ライブツアー、サーキットライブ出演、東京遠征、ワンマンライブにも挑戦。多くの貴重な経験をしました。
+          音楽に打ち込む。インディーズバンドとして、制作、リリース、ラジオ出演、ライブツアー、サーキットライブ出演、東京遠征、ワンマンライブにも挑戦。
         </p>
       </ul>
       <Divider />
