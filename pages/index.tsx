@@ -45,8 +45,9 @@ export default function Home() {
       <Header titlePre="Home" />
       <div className={styles.main}>
         <h1>Shota Akizuki</h1>
+
         <p>
-          I’m a developer, designer, and creator. Feel free to contact with me.
+          👨🏻‍💻フロントエンドエンジニアを目標にプログラミングを勉強中です！React・Flutterを中心に開発しています。大阪在住、愛媛県出身。
         </p>
 
         <Divider />
