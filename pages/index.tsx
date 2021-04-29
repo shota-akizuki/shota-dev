@@ -47,7 +47,8 @@ export default function Home() {
         <h1>Shota Akizuki</h1>
 
         <p>
-          👨🏻‍💻フロントエンドエンジニアを目標にプログラミングを勉強中です！React・Flutterを中心に開発しています。大阪在住、愛媛県出身。
+          👨🏻‍💻 React・Next.js・React
+          Native中心にフロントエンド開発をしています！大阪在住・愛媛県出身。
         </p>
 
         <Divider />
