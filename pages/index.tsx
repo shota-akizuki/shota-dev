@@ -47,8 +47,8 @@ export default function Home() {
         <h1>Shota Akizuki</h1>
 
         <p>
-          👨🏻‍💻 React・Next.js・React
-          Native中心にフロントエンド開発をしています！大阪在住・愛媛県出身。
+          👨🏻‍💻
+          React・Next.js・TypeScript・JavaScript中心にフロントエンド開発をしています！大阪在住・愛媛県出身。
         </p>
 
         <Divider />
