@@ -46,10 +46,7 @@ export default function Home() {
       <div className={styles.main}>
         <h1>Shota Akizuki</h1>
 
-        <p>
-          👨🏻‍💻
-          React・Next.js・TypeScript・JavaScript中心にフロントエンド開発をしています！大阪在住・愛媛県出身。
-        </p>
+        <p>👨🏻‍💻🔰 Developer / React・Next.js・Flutter / 大阪在住・愛媛県出身</p>
 
         <Divider />
         <Timeline />
