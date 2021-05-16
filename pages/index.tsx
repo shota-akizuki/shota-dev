@@ -46,7 +46,9 @@ export default function Home() {
       <div className={styles.main}>
         <h1>Shota Akizuki</h1>
 
-        <p>👨🏻‍💻🔰 Developer / React・Next.js・Flutter / 大阪在住・愛媛県出身</p>
+        <p>
+          👨🏻‍💻 Developer / React Flutter SwiftUI Firebase / Osaka / from Ehime
+        </p>
 
         <Divider />
         <Timeline />

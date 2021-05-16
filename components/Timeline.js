@@ -18,12 +18,10 @@ export default function Timeline() {
         <h1 className={styles.title}>Timeline</h1>
         <Year>2021</Year>
         <ul>
-          <li>💒 Got Married</li>
+          <li> Got Married</li>
           <p>いい出会いに恵まれました。感謝！</p>
-          <li>📱 Launched my first iOS app.</li>
-          <p>
-            FlutterでiOSアプリを初リリース。その後、Web(React)に軸足を移す。
-          </p>
+          <li>📱 Launched my first iOS app</li>
+          <p>FlutterでiOSアプリを初リリース。</p>
         </ul>
         <Divider />
         <Year>2020</Year>
