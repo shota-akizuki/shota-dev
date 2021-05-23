@@ -45,11 +45,7 @@ export default function Home() {
       <Header titlePre="Home" />
       <div className={styles.main}>
         <h1>Shota Akizuki</h1>
-
-        <p>
-          👨🏻‍💻 Developer / React Flutter SwiftUI Firebase / Osaka / from Ehime
-        </p>
-
+        <p>👨🏻‍💻 Developer / React, React Native, Firebase / Osaka / from Ehime</p>
         <Divider />
         <Timeline />
         <Divider />
