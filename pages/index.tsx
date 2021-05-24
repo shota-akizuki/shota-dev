@@ -8,6 +8,7 @@ import Envelope from '../components/svgs/envelope';
 import Instagram from '../components/svgs/instagram';
 import React from 'react';
 import Timeline from '../components/Timeline';
+
 const Divider = () => {
   return <div className={styles.divider}></div>;
 };
@@ -45,10 +46,7 @@ export default function Home() {
       <Header titlePre="Home" />
       <div className={styles.main}>
         <h1>Shota Akizuki</h1>
-        <p>
-          👨🏻‍💻 Developer / React, Flutter, React Native, Firebase / Osaka, from
-          Ehime
-        </p>
+        <p>👨🏻‍💻 Developer / React, Flutter, Firebase / Osaka, from Ehime</p>
         <Divider />
         <Timeline />
         <Divider />
