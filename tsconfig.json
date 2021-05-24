@@ -19,7 +19,9 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/blog/[id].js",
-    "pages/blogs.jsx"
+    "pages/blogs.jsx",
+    "pages/blogs.js",
+    "pages/blogs.js"
   ],
   "exclude": ["node_modules"]
 }
