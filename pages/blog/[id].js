@@ -5,8 +5,10 @@ import Head from 'next/head';
 import ErrorPage from 'next/error';
 import { useEffect } from 'react';
 import { Footer } from '../../components/footer';
+import { client } from '../../libs/client';
 
 //ブログポスト本体のコンポーネント
+
 export default function BlogId({ blog, preview }) {
   //Twitterの埋め込みをマウント時に取得する
   useEffect(() => {
@@ -15,6 +17,7 @@ export default function BlogId({ blog, preview }) {
     script.setAttribute('async', 'true');
     document.head.appendChild(script);
   }, []);
+
   //ブログがない時のエラー処理
   if (!blog) {
     return <ErrorPage statusCode={404} />;
@@ -62,12 +65,7 @@ export default function BlogId({ blog, preview }) {
 
 //静的生成のためのパスを指定
 export const getStaticPaths = async () => {
-  const key = {
-    headers: { 'X-API-KEY': process.env.API_KEY }
-  };
-  const data = await fetch('https://shota-akizuki.microcms.io/api/v1/blog', key)
-    .then((res) => res.json())
-    .catch(() => null);
+  const data = await client.get({ endpoint: 'blog' });
   const paths = data.contents.map((content) => `/blog/${content.id}`);
   return { paths, fallback: true };
 };
@@ -77,19 +75,17 @@ export const getStaticProps = async (context) => {
   // Cookieが設定されたプレビューモードのページをリクエストした場合:
   // - context.previewはtrueになる。
   // - context.previewDataはsetPreviewDataで使用されている引数と同じになる。
+
   const id = context.params.id;
-  const key = {
-    headers: { 'X-API-KEY': process.env.API_KEY }
-  };
+
   let url = `https://shota-akizuki.microcms.io/api/v1/blog/` + id;
   // context.previewがtrueの場合、${slug}?draftKey=${draftKey} をAPIエンドポイントに追加
   if (context.preview) {
     url += `?draftKey=${context.previewData.draftKey}`;
   }
 
-  const data = await fetch(url, key)
-    .then((res) => res.json())
-    .catch(() => null);
+  const data = await client.get({ endpoint: 'blog', contentId: id });
+
   return {
     props: {
       blog: data,

@@ -3,6 +3,7 @@ import Header from '../components/header';
 import { parseISO, format } from 'date-fns';
 import styles from '../styles/blogs.module.css';
 import { Footer } from '../components/footer';
+import { client } from '../libs/client';
 
 //ブログ一覧を表示するコンポーネント
 
@@ -30,12 +31,7 @@ export default function Blogs({ blog }) {
 
 // データをテンプレートに受け渡す部分の処理を記述
 export const getStaticProps = async () => {
-  const key = {
-    headers: { 'X-API-KEY': process.env.API_KEY }
-  };
-  const data = await fetch('https://shota-akizuki.microcms.io/api/v1/blog', key)
-    .then((res) => res.json())
-    .catch(() => null);
+  const data = await client.get({ endpoint: 'blog' });
   return {
     props: {
       blog: data.contents
