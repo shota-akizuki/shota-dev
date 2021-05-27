@@ -35,13 +35,13 @@ const contacts = [
   }
 ];
 
+// Home画面を表示する
 export default function Home() {
   return (
     <>
       <Header titlePre="Home" />
       <div className={styles.main}>
-        <h1>Shota Akizuki</h1>
-        <p>👨🏻‍💻 Developer / Flutter, Firebase, React, React Native</p>
+        <h1 style={{ marginBottom: 40 }}>Shota Akizuki</h1>
         <ul>
           {contacts.map(({ Comp, link, label }) => {
             return (

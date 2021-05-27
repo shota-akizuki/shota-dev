@@ -5,8 +5,7 @@ import styles from '../styles/blogs.module.css';
 import { Footer } from '../components/footer';
 import { client } from '../libs/client';
 
-//ブログ一覧を表示するコンポーネント
-
+//ブログ一覧を表示する
 export default function Blogs({ blog }) {
   return (
     <>

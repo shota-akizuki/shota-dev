@@ -7,10 +7,10 @@ import { useEffect } from 'react';
 import { Footer } from '../../components/footer';
 import { client } from '../../libs/client';
 
-//ブログポスト本体のコンポーネント
+// ブログポスト本体
 
 export default function BlogId({ blog, preview }) {
-  //Twitterの埋め込みをマウント時に取得する
+  // Twitterの埋め込みをマウント時に取得する
   useEffect(() => {
     const script = document.createElement('script');
     script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
@@ -18,7 +18,7 @@ export default function BlogId({ blog, preview }) {
     document.head.appendChild(script);
   }, []);
 
-  //ブログがない時のエラー処理
+  // ブログがない時のエラー処理
   if (!blog) {
     return <ErrorPage statusCode={404} />;
   }
@@ -63,7 +63,7 @@ export default function BlogId({ blog, preview }) {
   );
 }
 
-//静的生成のためのパスを指定
+// 静的生成のためのパスを指定する
 export const getStaticPaths = async () => {
   const data = await client.get({ endpoint: 'blog' });
   const paths = data.contents.map((content) => `/blog/${content.id}`);

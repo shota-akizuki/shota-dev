@@ -1,5 +1,4 @@
 export default async (req, res) => {
-
   //次のパラメーターを確認。
   if (!req.query.id) {
     return res.status(401).json({ message: 'Invalid token' });
@@ -13,9 +12,7 @@ export default async (req, res) => {
     .then((res) => res.json())
     .catch((error) => null);
 
-
-
-  // slugが存在しない場合、プレビューモードを有効にしないようにする、
+  // slugが存在しない場合、プレビューモードを有効にしないようにする。
   if (!post) {
     return res.status(401).json({ message: 'Invalid slug' });
   }
