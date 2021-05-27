@@ -7,11 +7,6 @@ import GitHub from '../components/svgs/github';
 import Envelope from '../components/svgs/envelope';
 import Instagram from '../components/svgs/instagram';
 import React from 'react';
-import Timeline from '../components/Timeline';
-
-const Divider = () => {
-  return <div className={styles.divider}></div>;
-};
 
 const contacts = [
   {
@@ -46,10 +41,7 @@ export default function Home() {
       <Header titlePre="Home" />
       <div className={styles.main}>
         <h1>Shota Akizuki</h1>
-        <p>👨🏻‍💻 Developer / React, Flutter, Firebase / Osaka, from Ehime</p>
-        <Divider />
-        <Timeline />
-        <Divider />
+        <p>👨🏻‍💻 Developer / Flutter, Firebase, React, React Native</p>
         <ul>
           {contacts.map(({ Comp, link, label }) => {
             return (
