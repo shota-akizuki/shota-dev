@@ -1,4 +1,4 @@
-/* ブログ一覧ページのスタイル */
+/* ブログ一覧のスタイル */
 
 .blogs ul {
   list-style: none;
@@ -21,7 +21,7 @@
 }
 
 .blogs h1 {
-  background: linear-gradient(45deg, #0d66ea 0%, #1bd0d1 30%);
+  background: linear-gradient(45deg, #0d66ea 0%, #1bd0d1 70%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: #111;

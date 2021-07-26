@@ -41,7 +41,8 @@ export default function Home() {
     <>
       <Header titlePre="Home" />
       <div className={styles.main}>
-        <h1 style={{ marginBottom: 40 }}>Shota Akizuki</h1>
+        <h1 >Shota Akizuki</h1>
+        <p >Developer / Flutter / Dart / Firebase</p>
         <ul>
           {contacts.map(({ Comp, link, label }) => {
             return (
