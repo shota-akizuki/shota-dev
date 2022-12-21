@@ -42,7 +42,7 @@ export default function Home() {
       <Header titlePre="Home" />
       <div className={styles.main}>
         <h1>Shota Akizuki</h1>
-        <p style={{ paddingLeft: 2 }}>Flutter Developer@Moderation LLC</p>
+        <p style={{ paddingLeft: 2 }}>Flutter Developer / Dart / Firebase</p>
         <ul>
           {contacts.map(({ Comp, link, label }) => {
             return (
