@@ -10,7 +10,7 @@ const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Blog', page: '/blogs' }
 ];
 
-export default ({ titlePre = '' }) => {
+export const Header = ({ titlePre = '' }) => {
   const { pathname } = useRouter();
 
   return (

@@ -1,12 +1,14 @@
-import Header from '../components/header';
+
 import styles from '../styles/home.module.css';
 import { Footer } from '../components/footer';
-import ExtLink from '../components/ext-link';
+
 import Twitter from '../components/svgs/twitter';
 import GitHub from '../components/svgs/github';
 import Envelope from '../components/svgs/envelope';
 import Instagram from '../components/svgs/instagram';
 import React from 'react';
+import { Header } from '../components/header';
+import { ExtLink } from '../components/ext-link';
 
 const contacts = [
   {
@@ -36,7 +38,7 @@ const contacts = [
 ];
 
 
-export default function Home() {
+export const Home = () => {
   return (
     <>
       <Header titlePre="Home" />
